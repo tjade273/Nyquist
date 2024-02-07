@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9CAB0BD2B740C9400EB1C78 /* Signal_BackupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */; };
+		E9CAB0BF2B740C9400EB1C78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */; };
+		E9CAB0C12B740C9500EB1C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */; };
+		E9CAB0C52B740C9500EB1C78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CAB0C42B740C9500EB1C78 /* Preview Assets.xcassets */; };
+		E9CAB0CF2B740C9500EB1C78 /* Signal_BackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0CE2B740C9500EB1C78 /* Signal_BackupTests.swift */; };
+		E9CAB0D92B740C9500EB1C78 /* Signal_BackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0D82B740C9500EB1C78 /* Signal_BackupUITests.swift */; };
+		E9CAB0DB2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9CAB0CB2B740C9500EB1C78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CAB0B12B740C9400EB1C78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9CAB0B82B740C9400EB1C78;
+			remoteInfo = "Signal Backup";
+		};
+		E9CAB0D52B740C9500EB1C78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CAB0B12B740C9400EB1C78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9CAB0B82B740C9400EB1C78;
+			remoteInfo = "Signal Backup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9CAB0B92B740C9400EB1C78 /* Signal Backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Signal Backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupApp.swift; sourceTree = "<group>"; };
+		E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9CAB0C22B740C9500EB1C78 /* Signal_Backup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Signal_Backup.entitlements; sourceTree = "<group>"; };
+		E9CAB0C42B740C9500EB1C78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9CAB0CA2B740C9500EB1C78 /* Signal BackupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Signal BackupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CAB0CE2B740C9500EB1C78 /* Signal_BackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupTests.swift; sourceTree = "<group>"; };
+		E9CAB0D42B740C9500EB1C78 /* Signal BackupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Signal BackupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CAB0D82B740C9500EB1C78 /* Signal_BackupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupUITests.swift; sourceTree = "<group>"; };
+		E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9CAB0B62B740C9400EB1C78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9CAB0C72B740C9500EB1C78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9CAB0D12B740C9500EB1C78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9CAB0B02B740C9400EB1C78 = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0BB2B740C9400EB1C78 /* Signal Backup */,
+				E9CAB0CD2B740C9500EB1C78 /* Signal BackupTests */,
+				E9CAB0D72B740C9500EB1C78 /* Signal BackupUITests */,
+				E9CAB0BA2B740C9400EB1C78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9CAB0BA2B740C9400EB1C78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0B92B740C9400EB1C78 /* Signal Backup.app */,
+				E9CAB0CA2B740C9500EB1C78 /* Signal BackupTests.xctest */,
+				E9CAB0D42B740C9500EB1C78 /* Signal BackupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9CAB0BB2B740C9400EB1C78 /* Signal Backup */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */,
+				E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */,
+				E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */,
+				E9CAB0C22B740C9500EB1C78 /* Signal_Backup.entitlements */,
+				E9CAB0C32B740C9500EB1C78 /* Preview Content */,
+			);
+			path = "Signal Backup";
+			sourceTree = "<group>";
+		};
+		E9CAB0C32B740C9500EB1C78 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0C42B740C9500EB1C78 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9CAB0CD2B740C9500EB1C78 /* Signal BackupTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0CE2B740C9500EB1C78 /* Signal_BackupTests.swift */,
+			);
+			path = "Signal BackupTests";
+			sourceTree = "<group>";
+		};
+		E9CAB0D72B740C9500EB1C78 /* Signal BackupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0D82B740C9500EB1C78 /* Signal_BackupUITests.swift */,
+				E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */,
+			);
+			path = "Signal BackupUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9CAB0B82B740C9400EB1C78 /* Signal Backup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9CAB0DE2B740C9500EB1C78 /* Build configuration list for PBXNativeTarget "Signal Backup" */;
+			buildPhases = (
+				E9CAB0B52B740C9400EB1C78 /* Sources */,
+				E9CAB0B62B740C9400EB1C78 /* Frameworks */,
+				E9CAB0B72B740C9400EB1C78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Signal Backup";
+			productName = "Signal Backup";
+			productReference = E9CAB0B92B740C9400EB1C78 /* Signal Backup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9CAB0C92B740C9500EB1C78 /* Signal BackupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9CAB0E12B740C9500EB1C78 /* Build configuration list for PBXNativeTarget "Signal BackupTests" */;
+			buildPhases = (
+				E9CAB0C62B740C9500EB1C78 /* Sources */,
+				E9CAB0C72B740C9500EB1C78 /* Frameworks */,
+				E9CAB0C82B740C9500EB1C78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9CAB0CC2B740C9500EB1C78 /* PBXTargetDependency */,
+			);
+			name = "Signal BackupTests";
+			productName = "Signal BackupTests";
+			productReference = E9CAB0CA2B740C9500EB1C78 /* Signal BackupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9CAB0D32B740C9500EB1C78 /* Signal BackupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9CAB0E42B740C9500EB1C78 /* Build configuration list for PBXNativeTarget "Signal BackupUITests" */;
+			buildPhases = (
+				E9CAB0D02B740C9500EB1C78 /* Sources */,
+				E9CAB0D12B740C9500EB1C78 /* Frameworks */,
+				E9CAB0D22B740C9500EB1C78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9CAB0D62B740C9500EB1C78 /* PBXTargetDependency */,
+			);
+			name = "Signal BackupUITests";
+			productName = "Signal BackupUITests";
+			productReference = E9CAB0D42B740C9500EB1C78 /* Signal BackupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9CAB0B12B740C9400EB1C78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E9CAB0B82B740C9400EB1C78 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E9CAB0C92B740C9500EB1C78 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E9CAB0B82B740C9400EB1C78;
+					};
+					E9CAB0D32B740C9500EB1C78 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E9CAB0B82B740C9400EB1C78;
+					};
+				};
+			};
+			buildConfigurationList = E9CAB0B42B740C9400EB1C78 /* Build configuration list for PBXProject "Signal Backup" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9CAB0B02B740C9400EB1C78;
+			productRefGroup = E9CAB0BA2B740C9400EB1C78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9CAB0B82B740C9400EB1C78 /* Signal Backup */,
+				E9CAB0C92B740C9500EB1C78 /* Signal BackupTests */,
+				E9CAB0D32B740C9500EB1C78 /* Signal BackupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9CAB0B72B740C9400EB1C78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9CAB0C52B740C9500EB1C78 /* Preview Assets.xcassets in Resources */,
+				E9CAB0C12B740C9500EB1C78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9CAB0C82B740C9500EB1C78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9CAB0D22B740C9500EB1C78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9CAB0B52B740C9400EB1C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9CAB0BF2B740C9400EB1C78 /* ContentView.swift in Sources */,
+				E9CAB0BD2B740C9400EB1C78 /* Signal_BackupApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9CAB0C62B740C9500EB1C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9CAB0CF2B740C9500EB1C78 /* Signal_BackupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9CAB0D02B740C9500EB1C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9CAB0DB2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift in Sources */,
+				E9CAB0D92B740C9500EB1C78 /* Signal_BackupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9CAB0CC2B740C9500EB1C78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9CAB0B82B740C9400EB1C78 /* Signal Backup */;
+			targetProxy = E9CAB0CB2B740C9500EB1C78 /* PBXContainerItemProxy */;
+		};
+		E9CAB0D62B740C9500EB1C78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9CAB0B82B740C9400EB1C78 /* Signal Backup */;
+			targetProxy = E9CAB0D52B740C9500EB1C78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E9CAB0DC2B740C9500EB1C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9CAB0DD2B740C9500EB1C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E9CAB0DF2B740C9500EB1C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Signal Backup/Signal_Backup.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Signal Backup/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-Backup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9CAB0E02B740C9500EB1C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Signal Backup/Signal_Backup.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Signal Backup/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-Backup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E9CAB0E22B740C9500EB1C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-BackupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signal Backup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Signal Backup";
+			};
+			name = Debug;
+		};
+		E9CAB0E32B740C9500EB1C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-BackupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signal Backup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Signal Backup";
+			};
+			name = Release;
+		};
+		E9CAB0E52B740C9500EB1C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-BackupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Signal Backup";
+			};
+			name = Debug;
+		};
+		E9CAB0E62B740C9500EB1C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-BackupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Signal Backup";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9CAB0B42B740C9400EB1C78 /* Build configuration list for PBXProject "Signal Backup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9CAB0DC2B740C9500EB1C78 /* Debug */,
+				E9CAB0DD2B740C9500EB1C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9CAB0DE2B740C9500EB1C78 /* Build configuration list for PBXNativeTarget "Signal Backup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9CAB0DF2B740C9500EB1C78 /* Debug */,
+				E9CAB0E02B740C9500EB1C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9CAB0E12B740C9500EB1C78 /* Build configuration list for PBXNativeTarget "Signal BackupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9CAB0E22B740C9500EB1C78 /* Debug */,
+				E9CAB0E32B740C9500EB1C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9CAB0E42B740C9500EB1C78 /* Build configuration list for PBXNativeTarget "Signal BackupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9CAB0E52B740C9500EB1C78 /* Debug */,
+				E9CAB0E62B740C9500EB1C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9CAB0B12B740C9400EB1C78 /* Project object */;
+}
