@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E99D673B2B82FC90006EB63A /* DeviceTransfer.proto in Sources */ = {isa = PBXBuildFile; fileRef = E99D673A2B82FC90006EB63A /* DeviceTransfer.proto */; };
+		E99D673F2B82FED0006EB63A /* DeviceTransfer.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D673D2B82FED0006EB63A /* DeviceTransfer.pb.swift */; };
+		E99D67402B82FED0006EB63A /* DeviceTransferProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D673E2B82FED0006EB63A /* DeviceTransferProto.swift */; };
+		E99D67432B8301CC006EB63A /* MCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67422B8301CC006EB63A /* MCService.swift */; };
+		E99D67452B83025E006EB63A /* SelfSigned.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67442B83025E006EB63A /* SelfSigned.swift */; };
+		E99D67472B830900006EB63A /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = E99D67462B830900006EB63A /* SwiftProtobuf */; };
 		E9CAB0BD2B740C9400EB1C78 /* Signal_BackupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */; };
 		E9CAB0BF2B740C9400EB1C78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */; };
 		E9CAB0C12B740C9500EB1C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */; };
@@ -14,6 +20,7 @@
 		E9CAB0CF2B740C9500EB1C78 /* Signal_BackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0CE2B740C9500EB1C78 /* Signal_BackupTests.swift */; };
 		E9CAB0D92B740C9500EB1C78 /* Signal_BackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0D82B740C9500EB1C78 /* Signal_BackupUITests.swift */; };
 		E9CAB0DB2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */; };
+		E9CAB0EC2B7433C700EB1C78 /* X509 in Frameworks */ = {isa = PBXBuildFile; productRef = E9CAB0EB2B7433C700EB1C78 /* X509 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E99D673A2B82FC90006EB63A /* DeviceTransfer.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = DeviceTransfer.proto; sourceTree = "<group>"; };
+		E99D673D2B82FED0006EB63A /* DeviceTransfer.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTransfer.pb.swift; sourceTree = "<group>"; };
+		E99D673E2B82FED0006EB63A /* DeviceTransferProto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTransferProto.swift; sourceTree = "<group>"; };
+		E99D67422B8301CC006EB63A /* MCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCService.swift; sourceTree = "<group>"; };
+		E99D67442B83025E006EB63A /* SelfSigned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSigned.swift; sourceTree = "<group>"; };
 		E9CAB0B92B740C9400EB1C78 /* Signal Backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Signal Backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupApp.swift; sourceTree = "<group>"; };
 		E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAB0EC2B7433C700EB1C78 /* X509 in Frameworks */,
+				E99D67472B830900006EB63A /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E99D673C2B82FED0006EB63A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E99D673D2B82FED0006EB63A /* DeviceTransfer.pb.swift */,
+				E99D673E2B82FED0006EB63A /* DeviceTransferProto.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		E9CAB0B02B740C9400EB1C78 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +120,13 @@
 			children = (
 				E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */,
 				E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */,
+				E99D67442B83025E006EB63A /* SelfSigned.swift */,
+				E99D67422B8301CC006EB63A /* MCService.swift */,
 				E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */,
 				E9CAB0C22B740C9500EB1C78 /* Signal_Backup.entitlements */,
+				E99D673C2B82FED0006EB63A /* Generated */,
 				E9CAB0C32B740C9500EB1C78 /* Preview Content */,
+				E99D673A2B82FC90006EB63A /* DeviceTransfer.proto */,
 			);
 			path = "Signal Backup";
 			sourceTree = "<group>";
@@ -145,6 +172,10 @@
 			dependencies = (
 			);
 			name = "Signal Backup";
+			packageProductDependencies = (
+				E9CAB0EB2B7433C700EB1C78 /* X509 */,
+				E99D67462B830900006EB63A /* SwiftProtobuf */,
+			);
 			productName = "Signal Backup";
 			productReference = E9CAB0B92B740C9400EB1C78 /* Signal Backup.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +248,10 @@
 				Base,
 			);
 			mainGroup = E9CAB0B02B740C9400EB1C78;
+			packageReferences = (
+				E9CAB0EA2B7433C700EB1C78 /* XCRemoteSwiftPackageReference "swift-certificates" */,
+				E99D67412B830197006EB63A /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
 			productRefGroup = E9CAB0BA2B740C9400EB1C78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99D673B2B82FC90006EB63A /* DeviceTransfer.proto in Sources */,
 				E9CAB0BF2B740C9400EB1C78 /* ContentView.swift in Sources */,
+				E99D67402B82FED0006EB63A /* DeviceTransferProto.swift in Sources */,
+				E99D67452B83025E006EB63A /* SelfSigned.swift in Sources */,
+				E99D67432B8301CC006EB63A /* MCService.swift in Sources */,
 				E9CAB0BD2B740C9400EB1C78 /* Signal_BackupApp.swift in Sources */,
+				E99D673F2B82FED0006EB63A /* DeviceTransfer.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +457,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Signal Backup/Signal_Backup.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Signal Backup/Preview Content\"";
+				DEVELOPMENT_TEAM = H45DCMM69R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -437,7 +479,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-Backup";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tjade273.signalbackup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -453,9 +495,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Signal Backup/Signal_Backup.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Signal Backup/Preview Content\"";
+				DEVELOPMENT_TEAM = H45DCMM69R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -473,7 +517,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tjade273.Signal-Backup";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tjade273.signalbackup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -609,6 +653,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E99D67412B830197006EB63A /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.25.2;
+			};
+		};
+		E9CAB0EA2B7433C700EB1C78 /* XCRemoteSwiftPackageReference "swift-certificates" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-certificates.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E99D67462B830900006EB63A /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E99D67412B830197006EB63A /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		E9CAB0EB2B7433C700EB1C78 /* X509 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9CAB0EA2B7433C700EB1C78 /* XCRemoteSwiftPackageReference "swift-certificates" */;
+			productName = X509;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9CAB0B12B740C9400EB1C78 /* Project object */;
 }
