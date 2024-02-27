@@ -10,9 +10,11 @@
 		E99D673B2B82FC90006EB63A /* DeviceTransfer.proto in Sources */ = {isa = PBXBuildFile; fileRef = E99D673A2B82FC90006EB63A /* DeviceTransfer.proto */; };
 		E99D673F2B82FED0006EB63A /* DeviceTransfer.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D673D2B82FED0006EB63A /* DeviceTransfer.pb.swift */; };
 		E99D67402B82FED0006EB63A /* DeviceTransferProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D673E2B82FED0006EB63A /* DeviceTransferProto.swift */; };
-		E99D67432B8301CC006EB63A /* MCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67422B8301CC006EB63A /* MCService.swift */; };
+		E99D67432B8301CC006EB63A /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67422B8301CC006EB63A /* BackupService.swift */; };
 		E99D67452B83025E006EB63A /* SelfSigned.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67442B83025E006EB63A /* SelfSigned.swift */; };
 		E99D67472B830900006EB63A /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = E99D67462B830900006EB63A /* SwiftProtobuf */; };
+		E99D67552B8BC110006EB63A /* RestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67542B8BC10F006EB63A /* RestoreService.swift */; };
+		E99D67572B8BD293006EB63A /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D67562B8BD293006EB63A /* QRCodeScannerView.swift */; };
 		E9CAB0BD2B740C9400EB1C78 /* Signal_BackupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */; };
 		E9CAB0BF2B740C9400EB1C78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */; };
 		E9CAB0C12B740C9500EB1C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */; };
@@ -21,6 +23,9 @@
 		E9CAB0D92B740C9500EB1C78 /* Signal_BackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0D82B740C9500EB1C78 /* Signal_BackupUITests.swift */; };
 		E9CAB0DB2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */; };
 		E9CAB0EC2B7433C700EB1C78 /* X509 in Frameworks */ = {isa = PBXBuildFile; productRef = E9CAB0EB2B7433C700EB1C78 /* X509 */; };
+		E9E1630E2B8C426000688400 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E1630D2B8C426000688400 /* BackupView.swift */; };
+		E9E163102B8C499800688400 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E1630F2B8C499800688400 /* QRGenerator.swift */; };
+		E9E163122B8C670200688400 /* RestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E163112B8C670200688400 /* RestoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +49,10 @@
 		E99D673A2B82FC90006EB63A /* DeviceTransfer.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = DeviceTransfer.proto; sourceTree = "<group>"; };
 		E99D673D2B82FED0006EB63A /* DeviceTransfer.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTransfer.pb.swift; sourceTree = "<group>"; };
 		E99D673E2B82FED0006EB63A /* DeviceTransferProto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTransferProto.swift; sourceTree = "<group>"; };
-		E99D67422B8301CC006EB63A /* MCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCService.swift; sourceTree = "<group>"; };
+		E99D67422B8301CC006EB63A /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
 		E99D67442B83025E006EB63A /* SelfSigned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSigned.swift; sourceTree = "<group>"; };
+		E99D67542B8BC10F006EB63A /* RestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreService.swift; sourceTree = "<group>"; };
+		E99D67562B8BD293006EB63A /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		E9CAB0B92B740C9400EB1C78 /* Signal Backup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Signal Backup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupApp.swift; sourceTree = "<group>"; };
 		E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +64,10 @@
 		E9CAB0D42B740C9500EB1C78 /* Signal BackupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Signal BackupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAB0D82B740C9500EB1C78 /* Signal_BackupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupUITests.swift; sourceTree = "<group>"; };
 		E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal_BackupUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9E1630D2B8C426000688400 /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
+		E9E1630F2B8C499800688400 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
+		E9E163112B8C670200688400 /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
+		E9E163152B8D864200688400 /* Signal-Backup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Signal-Backup-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +129,13 @@
 		E9CAB0BB2B740C9400EB1C78 /* Signal Backup */ = {
 			isa = PBXGroup;
 			children = (
+				E9E163152B8D864200688400 /* Signal-Backup-Info.plist */,
 				E9CAB0BC2B740C9400EB1C78 /* Signal_BackupApp.swift */,
-				E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */,
+				E9E1630C2B8C415800688400 /* Views */,
 				E99D67442B83025E006EB63A /* SelfSigned.swift */,
-				E99D67422B8301CC006EB63A /* MCService.swift */,
+				E9E1630F2B8C499800688400 /* QRGenerator.swift */,
+				E99D67422B8301CC006EB63A /* BackupService.swift */,
+				E99D67542B8BC10F006EB63A /* RestoreService.swift */,
 				E9CAB0C02B740C9500EB1C78 /* Assets.xcassets */,
 				E9CAB0C22B740C9500EB1C78 /* Signal_Backup.entitlements */,
 				E99D673C2B82FED0006EB63A /* Generated */,
@@ -154,6 +168,17 @@
 				E9CAB0DA2B740C9500EB1C78 /* Signal_BackupUITestsLaunchTests.swift */,
 			);
 			path = "Signal BackupUITests";
+			sourceTree = "<group>";
+		};
+		E9E1630C2B8C415800688400 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAB0BE2B740C9400EB1C78 /* ContentView.swift */,
+				E9E1630D2B8C426000688400 /* BackupView.swift */,
+				E9E163112B8C670200688400 /* RestoreView.swift */,
+				E99D67562B8BD293006EB63A /* QRCodeScannerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +323,12 @@
 				E9CAB0BF2B740C9400EB1C78 /* ContentView.swift in Sources */,
 				E99D67402B82FED0006EB63A /* DeviceTransferProto.swift in Sources */,
 				E99D67452B83025E006EB63A /* SelfSigned.swift in Sources */,
-				E99D67432B8301CC006EB63A /* MCService.swift in Sources */,
+				E9E1630E2B8C426000688400 /* BackupView.swift in Sources */,
+				E99D67552B8BC110006EB63A /* RestoreService.swift in Sources */,
+				E9E163102B8C499800688400 /* QRGenerator.swift in Sources */,
+				E9E163122B8C670200688400 /* RestoreView.swift in Sources */,
+				E99D67572B8BD293006EB63A /* QRCodeScannerView.swift in Sources */,
+				E99D67432B8301CC006EB63A /* BackupService.swift in Sources */,
 				E9CAB0BD2B740C9400EB1C78 /* Signal_BackupApp.swift in Sources */,
 				E99D673F2B82FED0006EB63A /* DeviceTransfer.pb.swift in Sources */,
 			);
@@ -464,6 +494,8 @@
 				DEVELOPMENT_TEAM = H45DCMM69R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Signal-Backup-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "SignalBackup needs access to your camera in order to scan pairing QR codes";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -502,6 +534,8 @@
 				DEVELOPMENT_TEAM = H45DCMM69R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Signal-Backup-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "SignalBackup needs access to your camera in order to scan pairing QR codes";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

@@ -9,71 +9,66 @@ import SwiftUI
 
 import Foundation
 
-class MultipeerConnectivityService: NSObject, ObservableObject, MCSessionDelegate,
+let cancelMessage = "App backgrounded".data(using: .utf8)!
+
+class BackupService: NSObject, ObservableObject, MCSessionDelegate,
     MCNearbyServiceAdvertiserDelegate
 {
-    var peerID: MCPeerID
-    var mcSession: MCSession
-    var advertiser: MCNearbyServiceAdvertiser?
-    var identity: SecIdentity?
-    var destFolder: URL?
+    var mcSession: MCSession?
+    var advertiser: MCNearbyServiceAdvertiser
+
+    var identity: SecIdentity
+    var tmpFolder: URL?
     var manifest: DeviceTransferProtoManifest?
+    var qrCode: Image
+    var connectdedPeer: MCPeerID?
+    
+    @Published
+    var transferring = false
+    
+    @Published
+    var needsSaving = false
     
     override init() {
-        do { self.identity = try newIdentity() } catch { logger.error("Failed to create new identity") }
-        self.peerID = MCPeerID(displayName: "Desktop App")
-        self.mcSession = MCSession(peer: peerID, securityIdentity: [self.identity!], encryptionPreference: .required)
+        self.advertiser = MCNearbyServiceAdvertiser(
+            peer: ourID,
+            discoveryInfo: nil,
+            serviceType: serviceType)
+
+        do { self.identity = try newIdentity() } catch { fatalError("Failed to create new identity") }
+        self.qrCode = try! generateQRCode(peerId: ourID, identity: self.identity)
         super.init()
-        self.mcSession.delegate = self
     }
     
-    func startAdvertising() -> Image? {
-        advertiser = MCNearbyServiceAdvertiser(
-            peer: self.peerID,
-            discoveryInfo: nil,
-            serviceType: "sgnl-new-device")
-        advertiser?.delegate = self
-        advertiser?.startAdvertisingPeer();
+    func startAdvertising() {
+        logger.log("Starting advertising")
+        advertiser.delegate = self
+        advertiser.startAdvertisingPeer();
         
         logger.log("Starting Advertising")
-        
-        var components = URLComponents()
-        components.scheme = "sgnl"
-        components.host = "transfer"
-        do {
-            guard let base64CertificateHash = try self.identity!.computeCertificateHash().base64EncodedString().encodeURIComponent else {
-                throw "failed to get base64 certificate hash"
-            }
-            
-            guard let base64PeerId = try NSKeyedArchiver.archivedData(withRootObject: self.peerID, requiringSecureCoding: true).base64EncodedString().encodeURIComponent else {
-                throw "failed to get base64 peerId"
-            }
-
-        let queryItems = [
-            "version": String(1),
-            "transferMode": "primary",
-            "certificateHash": base64CertificateHash,
-            "peerId": base64PeerId
-        ]
-
-        components.queryItems = queryItems.map { URLQueryItem(name: $0.key, value: $0.value) }
-
-        logger.debug("URL: \(components.url!.absoluteString)")
-        
-        return generateQRCode(from: components.url!.absoluteString)
-        }
-        catch {return nil }
-        //components.url!
-        
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
         logger.log("Failed to start advertising: \(error.localizedDescription)")
     }
     
+    // TODO: is this mutexed?
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         logger.log("Received invitation from \(peerID.displayName)")
-        invitationHandler(true, self.mcSession)
+        
+        if transferring, let connected = self.connectdedPeer {
+            logger.log("Rejected invitation from \(peerID.displayName). Already connected to \(connected.displayName)")
+        } else {
+            connectdedPeer = peerID
+            transferring = true
+            
+            self.mcSession = MCSession(peer:ourID, securityIdentity: [self.identity], encryptionPreference: .required)
+            self.mcSession?.delegate = self
+            
+            self.tmpFolder = try! FileManager.default.url(for: .itemReplacementDirectory, in: .userDomainMask, appropriateFor: FileManager.default.temporaryDirectory, create: true)
+            invitationHandler(true, self.mcSession)
+            logger.log("Accepted invitation from \(peerID.displayName)")
+        }
     }
     
     // Implement the required MCSessionDelegate methods here
@@ -85,11 +80,16 @@ class MultipeerConnectivityService: NSObject, ObservableObject, MCSessionDelegat
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         // Handle receiving data
         logger.log("Data Receive: Peer \(peerID.displayName), data: \(data.base64EncodedString())")
+
+        guard peerID == self.connectdedPeer
+        else {
+            return
+        }
         if data == "Transfer Complete".data(using: .utf8)! {
-            let response = "App backgrounded".data(using: .utf8)!
-            do {
-                try session.send(response, toPeers: [peerID], with: .unreliable)
-            } catch {}
+           // do {
+            //    try session.send(cancelMessage, toPeers: [peerID], with: .unreliable)
+           // } catch {}
+            self.needsSaving = true
         }
     }
     
@@ -130,8 +130,11 @@ class MultipeerConnectivityService: NSObject, ObservableObject, MCSessionDelegat
             
             // TODO: validate hash
             
-            let dest = destFolder!.appending(component: file.identifier)
+            let dest = tmpFolder!.appending(component: file.identifier)
             do {
+                if let localURL = localURL {
+                    logger.log("moving \(localURL) to \(dest)")
+                }
                 try FileManager.default.moveItem(at: localURL!, to: dest)
             } catch {fatalError()}
         }
@@ -148,14 +151,28 @@ class MultipeerConnectivityService: NSObject, ObservableObject, MCSessionDelegat
         }
         self.manifest = manifest
         do {
-            let dest = destFolder!.appending(component: "manifest")
+            let dest = tmpFolder!.appending(component: "manifest")
             try FileManager.default.moveItem(at: localURL, to: dest)
         }
         catch {
             logger.log("File move failed \(error)")
             fatalError()
         }
-        
+    }
+    
+    func cancelTransfer() {
+        if transferring, let connectdedPeer = self.connectdedPeer, let session = self.mcSession {
+            try? session.send(cancelMessage, toPeers: [connectdedPeer], with: .unreliable)
+            session.disconnect()
+            transferring = false
+            try? FileManager.default.removeItem(at: self.tmpFolder!)
+        }
+    }
+    
+    func stopAdvertising() {
+        cancelTransfer()
+        advertiser.stopAdvertisingPeer()
+        logger.log("Stopped Adevrtising")
     }
 }
 

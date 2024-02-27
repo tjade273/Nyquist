@@ -20,8 +20,6 @@ let teamID = "XV8FX9AS7N"
 //let teamID = "V42B9WH5ZS"
 let bundleIdentifier = teamID + "." +
     "signal-backup"
-    //Bundle.main.bundleIdentifier!
-
 
 let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "network")
 
@@ -42,21 +40,24 @@ func deleteSelfSignedIdentityFromKeychain() throws {
 
 
 struct ContentView: View {
-    @ObservedObject var mcService = MultipeerConnectivityService()
-    @State private var image: Image?
+    var backupService = BackupService()
+    //@ObservedObject var restoreService = RestoreService()
+    @State private var backupURL: URL?
+    @State private var restoreIsShowing = false
 
     var body: some View {
-        VStack {
-            Button("Choose Destination Directory") {
-                mcService.destFolder = selectDestFolder()
-                image = mcService.startAdvertising()
+        NavigationStack {
+            VStack {
+                Spacer()
+                NavigationLink(destination: BackupView(backupURL: $backupURL)) {
+                    Text("Backup")
+                }
+                Spacer()
+                NavigationLink(destination: RestoreView(backupURL: $backupURL)) {
+                    Text("Restore")
+                }
+                Spacer()
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
-        
-            image?.resizable().frame(width: 300.0, height: 300.0)
         }
     }
 }
@@ -78,20 +79,6 @@ public extension NSString {
         characterSet.insert(charactersIn: "-_.!~*'()")
         return addingPercentEncoding(withAllowedCharacters: characterSet)
     }
-}
-
-
-func generateQRCode(from string: String) -> Image? {
-    let context = CIContext()
-    let filter = CIFilter.qrCodeGenerator()
-    filter.message = Data(string.utf8)
-    
-    if let outputImage = filter.outputImage {
-        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
-            return Image(cgimg, scale: 10, label: Text("QR Image"))
-        }
-    }
-    return nil
 }
 
 func selectDestFolder() -> URL {
