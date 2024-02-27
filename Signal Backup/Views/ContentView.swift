@@ -24,7 +24,7 @@ let bundleIdentifier = teamID + "." +
 let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "network")
 
 func deleteSelfSignedIdentityFromKeychain() throws {
-    let deleteQuery: [CFString: Any] = [
+    let _deleteQuery: [CFString: Any] = [
         kSecClass: kSecClassIdentity,
         //kSecAttrAccessGroup: bundleIdentifier,
         kSecAttrLabel: tmpKeyLabel

@@ -13,28 +13,35 @@ struct RestoreView: View {
     @State private var restoreURL: URL?
     @State private var cameraDisplayed = false
     @State private var peerQR: URL?;
+    //@State private var transferring = false
     @Environment(\.dismiss) var dismiss
+    @StateObject private var restoreService = RestoreService();
     
     var body: some View {
         VStack {
-            QRCodeScannerView(peerQR: $peerQR)
-        }.fileImporter(isPresented: $filePickerPresented, allowedContentTypes: [.folder],
-            allowsMultipleSelection: false
-        ) { result in
+            if (cameraDisplayed){
+                QRCodeScannerView(peerQR: $peerQR, transferReady: $restoreService.transferring)
+            }
+        }.fileImporter(isPresented: $filePickerPresented, allowedContentTypes: [.directory], allowsMultipleSelection: false)
+        { result in
             switch result{
                 case .success(let url):
                     restoreURL = url[0]
                     cameraDisplayed = true
+                guard restoreURL!.startAccessingSecurityScopedResource() else {fatalError("Failed to get directory access")}
                 case .failure:
-                    filePickerPresented = true
+                    dismiss()
             }
         } onCancellation: {
             dismiss()
         }
         .fileDialogDefaultDirectory(backupURL)
-        if let url = backupURL {
-            Text(url.absoluteString)
-        }
+        .sheet(isPresented: $restoreService.transferring, content: {
+            Text("Transferring...").frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100).onAppear(){
+                restoreService.srcFolder = restoreURL!
+                restoreService.startBrowsing(url: peerQR!)
+            }
+        })
     }
 }
 

@@ -89,8 +89,14 @@ class BackupService: NSObject, ObservableObject, MCSessionDelegate,
            // do {
             //    try session.send(cancelMessage, toPeers: [peerID], with: .unreliable)
            // } catch {}
-            self.needsSaving = true
+            DispatchQueue.main.async{
+                self.needsSaving = true
+                self.transferring = false
+                logger.log("Transfer Complete - saving")
+            }
         }
+        try? session.send("Transfer Complete".data(using: .utf8)!, toPeers: [self.connectdedPeer!], with: .reliable)
+        session.disconnect()
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -109,7 +115,7 @@ class BackupService: NSObject, ObservableObject, MCSessionDelegate,
         } else {
             
             let nameComponents = resourceName.components(separatedBy: " ")
-            guard let fileIdentifier = nameComponents.first, let fileHash = nameComponents.last, nameComponents.count == 2 else {
+            guard let fileIdentifier = nameComponents.first, let checksum = nameComponents.last, nameComponents.count == 2 else {
                 fatalError()
             }
             
@@ -128,15 +134,19 @@ class BackupService: NSObject, ObservableObject, MCSessionDelegate,
             // Handle finishing receiving a resource
             logger.log("Finish resource Receive: Peer \(peerID.displayName), resource: \(resourceName) at \(localURL?.absoluteString)")
             
-            // TODO: validate hash
+            let fileHash = Data(SHA256.hash(data: try! Data(contentsOf: localURL!))).hexEncodedString()
+            if fileHash != checksum {
+                logger.error("File \(file.identifier) is corrupted - incorrect hash value")
+            }
             
-            let dest = tmpFolder!.appending(component: file.identifier)
+            let dest = tmpFolder!.appending(component: file.relativePath)
             do {
                 if let localURL = localURL {
                     logger.log("moving \(localURL) to \(dest)")
                 }
+                try FileManager.default.createDirectory(at: dest.deletingLastPathComponent(), withIntermediateDirectories: true)
                 try FileManager.default.moveItem(at: localURL!, to: dest)
-            } catch {fatalError()}
+            } catch {fatalError("failed moving file to tmp dir: \(error)")}
         }
     }
     

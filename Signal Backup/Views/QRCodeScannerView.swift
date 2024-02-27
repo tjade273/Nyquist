@@ -4,6 +4,7 @@ import AVFoundation
 struct QRCodeScannerView: NSViewRepresentable {
 
     @Binding var peerQR: URL?;
+    @Binding var transferReady: Bool
     
     class Coordinator: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         var parent: QRCodeScannerView
@@ -26,7 +27,7 @@ struct QRCodeScannerView: NSViewRepresentable {
                 print("messageString \(qrCodeFeature.messageString!)")
                 parent.peerQR = URL(string: qrCodeFeature.messageString!)
                 parent.session.stopRunning()
-
+                parent.transferReady = true
             }
         }
 
