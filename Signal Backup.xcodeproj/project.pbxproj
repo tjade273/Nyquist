@@ -68,6 +68,7 @@
 		E9E1630F2B8C499800688400 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		E9E163112B8C670200688400 /* RestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreView.swift; sourceTree = "<group>"; };
 		E9E163152B8D864200688400 /* Signal-Backup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Signal-Backup-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E9E163162B8EBC9100688400 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 		E9CAB0B02B740C9400EB1C78 = {
 			isa = PBXGroup;
 			children = (
+				E9E163162B8EBC9100688400 /* README.md */,
 				E9CAB0BB2B740C9400EB1C78 /* Signal Backup */,
 				E9CAB0CD2B740C9500EB1C78 /* Signal BackupTests */,
 				E9CAB0D72B740C9500EB1C78 /* Signal BackupUITests */,
